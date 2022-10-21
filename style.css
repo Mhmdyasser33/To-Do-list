@@ -1,0 +1,134 @@
+*{
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: border-box ;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --background : #fff ; 
+    --bodyColor : #e3f2fd ; 
+   --borderColor : #4070fa ;
+   --Color : #f2f2f2 ; 
+   --trashColor : #707070 ;
+   --blackColor : #000 ;
+   --lastColor : #010718; 
+  
+}
+/* Start first part area */
+body{
+    background: var(--borderColor) ;
+}
+.container{
+background: var(--background) ;
+position: relative ;
+max-width: 500px ;
+width : 100% ; 
+padding : 25px ;
+margin: 60px auto ;
+border-radius: 15px ;
+box-shadow: 0 10px 15px rgba(0, 0 , 0, .15) ;
+}
+.container .input-items{
+    position: relative;
+    max-width : 500px ; 
+    height:55px ;
+}
+.container .input-items textarea{
+    width : 100%;
+    height: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 13px ;
+    outline: none ;
+}
+.container .input-items textarea:focus{
+    border : 2px solid var(--borderColor) ; 
+}
+.container .input-items textarea:focus ~ .note{
+    color: var(--borderColor);
+}
+.container .input-items textarea::-webkit-scrollbar{
+    display: none ;
+}
+.container .input-items i{
+    position: absolute ;
+    top : 25% ;
+    right: 2%;
+    font-size: 22px ;
+}
+/* End first part area  */
+/* Start second part area  */
+.container .todolist{
+ margin-top: 20px ;
+ max-height: 350px ;
+ overflow-y: auto ;
+ padding-right: 13px ;
+}
+.container .todolist .task{
+    list-style: none ;
+    background: var(--Color);
+    display: flex ;
+    align-items: center ;
+    padding: 20px ;
+    border-radius: 15px ;
+    position: relative ; 
+    margin-top: 10px ;
+}
+.container .todolist input{
+    width : 15px ;
+    height: 15px ;
+    cursor: pointer;
+    accent-color: var(--borderColor);
+    cursor: pointer;
+    pointer-events: none ;
+}
+.container .todolist i{
+    position: absolute ;
+   top :40%;
+    right: 2%;
+    font-size: 17px ;
+    cursor: pointer;
+    opacity: .5;
+    display: none ;
+}
+.container .todolist i:hover{
+    opacity: 1 ;
+}
+.container .todolist:hover i {
+    display: inline-flex ;
+}
+.container .todolist span{
+   position: relative ;
+   top : -2px ;
+   margin: 0 8px ;
+}
+input:checked ~ .text{
+    text-decoration: line-through ;
+}
+/* End second part area  */
+/* Start last part area */
+.lastArea{
+    position: relative ;
+}
+.lastArea {
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    margin-top: 15px ; 
+    transition: var(--trans-5s);
+}
+.lastArea .clear-btn{
+    font-size: 16px ;
+    font-weight: 400 ;
+    background: var(--borderColor) ;
+    color : var(--lastColor) ; 
+    padding: 10px ;
+    border-radius: 10px ;
+    border: none  ;
+    cursor: pointer ;
+    color: var(--background)  ;
+    white-space: nowrap ;
+    pointer-events: none;
+}
+/* End last part area */
